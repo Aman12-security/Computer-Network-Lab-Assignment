@@ -20,13 +20,13 @@ Mesh | Multiple paths, fault tolerant | Many cables | Excellent
 
 ## Screenshots
 ### Bus
-![Screenshot](Screenshot.png)
+![Screenshot](Screenshot%201.png)
 ### Star
-![Screenshot](Screenshot.png)
+![Screenshot](Screenshot%202.png)
 ### Ring
-![Screenshot](Screenshot.png)
+![Screenshot](Screenshot%203.png)
 ### Mesh
-![Screenshot](Screenshot.png)
+![Screenshot](Screenshot%204.png)
 ## How to run
 1. Open Cisco Packet Tracer  
 2. Open any .pkt file  
