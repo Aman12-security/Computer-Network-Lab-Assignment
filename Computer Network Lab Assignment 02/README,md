@@ -1,0 +1,55 @@
+# Experiment Title: Packet Flow Visualization
+## Aim
+To observe how packets move between devices, how switches learn MAC addresses, and how ICMP echo request/reply travels through a small network using Packet Tracer Simulation Mode.
+
+## Objective
+- Use Packet Tracer's Simulation Mode to observe ARP and ICMP packet flow.
+- Understand how switches learn MAC addresses and how ARP resolves IP to MAC.
+- Learn to interpret the event list timeline in Packet Tracer.
+
+## Theory
+- **ARP (Address Resolution Protocol)**: Used to map IP addresses to MAC addresses. When a device wants to communicate with another device, it sends an ARP request to discover the MAC address of the destination IP.
+- **ICMP (Internet Control Message Protocol)**: Used by devices to send diagnostic messages, commonly in the form of a ping.
+- **MAC Address Learning**: Switches dynamically learn the MAC addresses of devices in the network by observing the source MAC address of incoming frames.
+
+## Network Topology
+![Network Topology](screenshots/topology.png)
+
+### Description:
+- **1 Switch**
+- **3 PCs** with IP addresses:
+  - PC1: 192.168.20.1
+  - PC2: 192.168.20.2
+  - PC3: 192.168.20.3
+
+## Step-by-step Procedure
+1. **Build the LAN**: Set up 1 switch and 3 PCs with IP addresses as per the given example.
+2. **First Ping Observation**: 
+   - Enable Simulation Mode and ping PC1 → PC2.
+   - Observe the ARP request and ARP reply before the ICMP ping.
+3. **Second Ping Observation**:
+   - Ping PC1 → PC2 again and observe fewer packets as ARP has been cached.
+4. **MAC Table Check**:
+   - View the switch's MAC address table to observe how it learns MAC addresses.
+
+## Configuration Commands
+- For PCs, assign static IPs:
+  - PC1: `192.168.20.1/24`
+  - PC2: `192.168.20.2/24`
+  - PC3: `192.168.20.3/24`
+- **PC1 Configuration Command**:  
+  `ip 192.168.20.1 255.255.255.0` (On PC1, configure the static IP)
+
+## Observations / Results
+- **First Ping**: When the first ping is performed, the ARP request is sent out to resolve the MAC address of PC2. The network experiences a delay as ARP resolution occurs.
+- **Second Ping**: The second ping is faster as the ARP request is cached in the switch and no additional ARP request is needed.
+- **Switch MAC Table**: After a few events, the switch learns the MAC addresses of the PCs. This can be observed in the event logs in Packet Tracer.
+
+### Screenshots:
+- **Topology Screenshot**: ![Topology](screenshots/topology.png)
+- **Event Log Screenshot**: ![Event Log](screenshots/output1.png)
+
+## Conclusion
+Through this experiment, we observed the process of ARP resolution and the behavior of ICMP ping. We also noted the difference in network behavior between the first and subsequent pings. The experiment highlights how switches learn MAC addresses and how network devices communicate using ARP and ICMP.
+
+---
