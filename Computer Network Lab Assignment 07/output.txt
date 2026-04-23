@@ -1,0 +1,16 @@
+Sliding Window Simulation Results:
+
+- Multiple frames transmitted without waiting for ACK
+- Sliding window movement observed during transmission
+- Acknowledgments received successfully
+- Piggybacking observed (ACK included in outgoing frames)
+
+Performance:
+
+- Improved throughput compared to Stop-and-Wait
+- Reduced number of acknowledgment packets
+- Efficient utilization of network bandwidth
+
+Conclusion:
+
+Sliding Window with Piggybacking enhances performance by combining flow control and acknowledgment optimization.
