@@ -1,0 +1,25 @@
+Test Cases - Multiple Access Protocols
+======================================
+
+Test Case 1: Low Traffic Load
+- 4 PCs sending slowly (1 packet every 3-4 seconds)
+- Observed collision rate for each protocol
+
+Test Case 2: High Traffic Load
+- 4 PCs sending packets rapidly and simultaneously
+- Measured frequency of collisions
+
+Test Case 3: Pure vs Slotted ALOHA
+- Random transmission vs timed/slot-based transmission
+- Compared number of collisions
+
+Test Case 4: CSMA/CD Collision Handling
+- Rapid transmission to force collisions
+- Observed detection and back-off behavior
+
+Test Case 5: CSMA/CA Avoidance Mechanism
+- Wireless topology with multiple PCs
+- Observed RTS/CTS handshake and low collision rate
+
+Each test repeated 3 times for consistency.
+Error/collision simulated by rapid simultaneous transmissions.
