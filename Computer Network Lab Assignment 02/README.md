@@ -1,7 +1,7 @@
 # Assignment: Packet Switching vs Circuit Switching in Cisco Packet Tracer
 
-**Student Name:** Adhvay  
-**Date:** [Today]
+**Student Name:** Aman Singhal  
+
 
 ## 1. Network Design
 - Both simulations use identical topology: 2 LANs connected via Router0.
