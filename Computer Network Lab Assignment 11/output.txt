@@ -1,0 +1,9 @@
+HTTP Simulation Results:
+
+- Client successfully sent HTTP GET request to server.
+- Server responded with HTTP response containing HTML page.
+- Web page loaded successfully in browser.
+
+Observation:
+HTTP works on request-response model.
+Client initiates communication and server responds with content.
