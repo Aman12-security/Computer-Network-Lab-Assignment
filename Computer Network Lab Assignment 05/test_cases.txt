@@ -1,0 +1,51 @@
+Test Cases - Flow Control and Error Control Protocols
+===================================================
+
+Test Environment:
+- Topology: PC0 -- Switch -- PC1
+- Tool: Cisco Packet Tracer Simulation Mode
+- Traffic: ICMP PDUs (Simple PDU)
+- Error Simulation: Manual PDU deletion in Event List
+
+Test Case 1: No Error (0% Packet Loss)
+----------------------------------------
+- Frames Sent: 15
+- Protocol: Stop-and-Wait
+- Protocol: Go-Back-N
+- Protocol: Selective Repeat
+- Expected: Smooth transmission with no retransmissions
+
+Test Case 2: Single Packet Error (Low Error Rate)
+-------------------------------------------------
+- Frames Sent: 10
+- Error: Delete 1 packet in the middle
+- Stop-and-Wait: Only 1 frame retransmitted
+- Go-Back-N: Multiple frames retransmitted (from error point)
+- Selective Repeat: Only 1 frame retransmitted
+- Observation: Clear difference in retransmission behavior
+
+Test Case 3: Multiple Packet Errors (10% Error Rate)
+----------------------------------------------------
+- Frames Sent: 20
+- Error: Delete 2 packets at different positions
+- Compared retransmission count and efficiency
+
+Test Case 4: High Traffic Load
+------------------------------
+- Frames Sent: 25 quickly
+- Observed window behavior in Go-Back-N and Selective Repeat
+- Measured approximate throughput by simulation time
+
+Test Case 5: Error + Delay Simulation
+-------------------------------------
+- Deleted packets + used slower Capture/Forward steps
+- Observed impact on Stop-and-Wait (most affected)
+
+Repeatability:
+- Each test case was repeated 3 times with same conditions
+- Results were consistent across repetitions
+
+Assumptions:
+- Manual PDU deletion simulates packet loss/error
+- Simulation Mode approximates protocol behavior
+- ICMP Echo Request/Reply used as frame + ACK proxy
