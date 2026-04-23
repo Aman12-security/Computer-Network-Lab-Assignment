@@ -1,0 +1,13 @@
+DNS Simulation Results:
+
+- DNS server successfully resolved domain names to IP addresses.
+- example.com resolved to 192.168.1.1
+- test.com resolved correctly at 192.168.1.4
+
+DDNS Simulation Results:
+
+- test.com updated to new IP 192.168.1.5
+- Changes reflected immediately on client queries.
+
+Conclusion:
+DNS enables domain resolution while DDNS allows dynamic updates to DNS records.
