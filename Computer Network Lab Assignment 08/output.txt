@@ -1,0 +1,24 @@
+Address Mapping Simulation Results:
+
+IPv4 and IPv6:
+- Devices successfully communicated using both IPv4 and IPv6
+- Dual-stack configuration verified
+
+ARP:
+- ARP request and response observed
+- MAC address successfully resolved
+
+RARP:
+- MAC to IP mapping simulated
+- Server responded correctly
+
+BOOTP:
+- Static IP assigned from server
+- Successful communication established
+
+DHCP:
+- DHCP Discover, Offer, Request, ACK observed
+- Dynamic IP assigned successfully
+
+Conclusion:
+Address mapping protocols enable efficient network communication and address resolution.
