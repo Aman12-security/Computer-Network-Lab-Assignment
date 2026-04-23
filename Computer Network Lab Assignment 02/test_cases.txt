@@ -1,0 +1,10 @@
+Test Case 1 - Packet Switching
+• From PC0 (192.168.1.1) to PC2 (192.168.2.1)
+• Method: Simple PDU in Simulation mode
+• Result: Packet path = PC0 → Switch0 → Router0 → Switch1 → PC2
+• Packets routed independently
+
+Test Case 2 - Circuit Switching
+• From PC0 to PC2
+• Method: ping 192.168.2.1 -t (continuous)
+• Result: Dedicated path maintained until manually stopped
