@@ -1,0 +1,19 @@
+Test Case 1:
+Query example.com
+Expected: 192.168.1.1
+Result: Success
+
+Test Case 2:
+Query test.com
+Expected: 192.168.1.4
+Result: Success
+
+Test Case 3:
+Update test.com
+Expected: New IP returned
+Result: Success
+
+Test Case 4:
+Query test.com
+Expected: 192.168.1.5
+Result: Success
