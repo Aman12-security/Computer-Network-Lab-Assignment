@@ -1,0 +1,29 @@
+Test Case 1:
+Ping PC1 from PC0 (IPv4)
+Expected: Success
+Result: Success
+
+Test Case 2:
+Ping using IPv6
+Expected: Success
+Result: Success
+
+Test Case 3:
+ARP resolution
+Expected: MAC address resolved
+Result: Observed
+
+Test Case 4:
+DHCP IP assignment
+Expected: Dynamic IP assigned
+Result: Success
+
+Test Case 5:
+BOOTP assignment
+Expected: Static IP assigned
+Result: Success
+
+Test Case 6:
+RARP request
+Expected: MAC to IP mapping
+Result: Simulated
