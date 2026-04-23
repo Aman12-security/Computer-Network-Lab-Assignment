@@ -1,0 +1,19 @@
+Test Case 1:
+Ping server from PC0
+Expected: Success
+Result: Success
+
+Test Case 2:
+Access web page from PC0
+Expected: Page loads
+Result: Success
+
+Test Case 3:
+Access web page from PC1
+Expected: Page loads
+Result: Success
+
+Test Case 4:
+HTTP simulation in Simulation Mode
+Expected: GET and Response visible
+Result: Observed
