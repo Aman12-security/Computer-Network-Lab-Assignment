@@ -1,0 +1,24 @@
+Test Case 1:
+Send multiple packets from PC0 to PC1
+Expected: Multiple frames sent without waiting
+Result: Success
+
+Test Case 2:
+Observe acknowledgments
+Expected: ACK received for frames
+Result: Success
+
+Test Case 3:
+Piggybacking verification
+Expected: ACK included in outgoing frames
+Result: Observed
+
+Test Case 4:
+Window movement
+Expected: Window slides forward after ACK
+Result: Observed
+
+Test Case 5:
+Network efficiency
+Expected: Reduced overhead
+Result: Verified
