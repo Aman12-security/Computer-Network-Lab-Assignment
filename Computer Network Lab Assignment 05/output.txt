@@ -1,0 +1,46 @@
+Output File - Flow Control and Error Control Protocols Simulation
+===========================================================
+
+
+1. Simulation Environment:
+   - Topology: PC0 (Sender) -- Switch -- PC1 (Receiver)
+   - All simulations performed in Cisco Packet Tracer Simulation Mode
+   - ICMP PDUs used to simulate frames
+   - Errors simulated by manually deleting PDUs in Event List
+
+2. Performance Results:
+
+Stop-and-Wait ARQ:
+------------------
+- No Error: Very low throughput, only 1 frame in flight at a time
+- With Error (10%): Frequent timeouts and retransmissions of single frame
+- Efficiency: Lowest among all three protocols
+- Observation: Simple implementation but highly inefficient due to constant waiting for ACK
+
+Go-Back-N ARQ:
+--------------
+- No Error: Good utilization, multiple frames sent before ACK
+- With Error (10%): Multiple good frames retransmitted after error
+- Efficiency: Better than Stop-and-Wait when error-free, but drops significantly with errors
+- Observation: Sender goes back to the erroneous frame and retransmits all subsequent frames
+
+Selective Repeat ARQ:
+---------------------
+- No Error: Highest utilization with multiple frames in window
+- With Error (10%): Only the lost frame is retransmitted
+- Efficiency: Highest among all three, especially under error conditions
+- Observation: Receiver buffers out-of-order good frames (conceptually observed)
+
+3. Comparative Analysis:
+   - Stop-and-Wait: Simplest but poorest performance
+   - Go-Back-N: Balanced but wastes bandwidth on errors
+   - Selective Repeat: Most efficient in error-prone networks
+
+4. Impact of Network Conditions:
+   - Low error rate     → Go-Back-N and Selective Repeat perform similarly well
+   - High error rate    → Selective Repeat performs significantly better
+   - High delay         → Stop-and-Wait suffers the most
+
+Overall Conclusion:
+Selective Repeat ARQ offers the best throughput and efficiency under varying network conditions,
+followed by Go-Back-N ARQ, while Stop-and-Wait ARQ is the least efficient but easiest to implement.
